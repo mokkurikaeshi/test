@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 import sys
 
+
+def tnnum(s):
+    try:
+        return int(s)
+    except:
+        return float(s)
+
+
 ans = 0
 for line in sys.stdin:
-    try:
-        ans += float(line)
-    except:
-        ans += int(line)
+    ans += tnnum(line)
+
 print(ans)
